@@ -366,6 +366,77 @@ body {
     font-size: 15px;
 }
 
+/* Customer Feedback Section */
+.feedback {
+    padding: 120px 8%;
+    background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+}
+
+.feedback-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.feedback-item {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease;
+}
+
+.feedback-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.feedback-item:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+.feedback-item:hover img {
+    transform: scale(1.05);
+}
+
+.feedback-info {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    border: 2px solid #3b82f6;
+    padding: 40px;
+    border-radius: 16px;
+    color: #1f2937;
+}
+
+.feedback-info p {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #1e40af;
+}
+
+.feedback-info ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.feedback-info li {
+    padding: 12px 0;
+    padding-left: 30px;
+    position: relative;
+    color: #374151;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.feedback-info li:before {
+    content: "✅";
+    position: absolute;
+    left: 0;
+}
+
 /* Contact Section */
 .contact { 
     padding: 120px 8%; 
@@ -443,6 +514,7 @@ footer {
     .gallery { columns: 2; }
     .hero h1 { font-size: 3.2rem; }
     .profile-image { width: 150px; height: 150px; }
+    .feedback-gallery { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 768px) {
@@ -453,10 +525,12 @@ footer {
     .nav-links li { margin-left: 20px; }
     .services { padding: 60px 5%; }
     .portfolio { padding: 60px 5%; }
+    .feedback { padding: 60px 5%; }
     .gallery { columns: 1; }
     .contact { padding: 60px 5%; }
     .contact-card { padding: 40px 20px; }
     .section-title { font-size: 2rem; margin-bottom: 40px; }
+    .feedback-info { padding: 20px; }
 }
 
 @media (max-width: 480px) {
@@ -472,4 +546,5 @@ footer {
     .section-title { font-size: 1.6rem; }
     .review-card { padding: 25px 20px; }
     .contact-card { padding: 30px 15px; }
+    .feedback-gallery { gap: 20px; }
 }
