@@ -101,6 +101,36 @@ body {
     padding: 0 5%;
 }
 
+.hero-content {
+    max-width: 800px;
+}
+
+/* Profile Badge */
+.profile-badge {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3b82f6;
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+    animation: glow 3s ease-in-out infinite;
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 60px rgba(59, 130, 246, 0.6);
+    }
+}
+
 .badge {
     background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
     color: #1e40af;
@@ -412,12 +442,14 @@ footer {
 @media (max-width: 992px) {
     .gallery { columns: 2; }
     .hero h1 { font-size: 3.2rem; }
+    .profile-image { width: 150px; height: 150px; }
 }
 
 @media (max-width: 768px) {
     .navbar { padding: 15px 5%; }
     .hero { margin-top: 70px; height: auto; min-height: calc(100vh - 70px); padding: 40px 5%; }
     .hero h1 { font-size: 2.8rem; }
+    .profile-image { width: 140px; height: 140px; }
     .nav-links li { margin-left: 20px; }
     .services { padding: 60px 5%; }
     .portfolio { padding: 60px 5%; }
@@ -434,6 +466,7 @@ footer {
     .nav-links a { font-size: 12px; }
     .hero h1 { font-size: 2rem; }
     .hero p { font-size: 1rem; }
+    .profile-image { width: 120px; height: 120px; }
     .main-btn { padding: 14px 30px; font-size: 14px; }
     .services-container { grid-template-columns: 1fr; }
     .section-title { font-size: 1.6rem; }
